@@ -4,11 +4,11 @@ services:
     env: python
     plan: free
     region: frankfurt
-    buildCommand: |
-      export AIOHTTP_NO_EXTENSIONS=1
-      pip install --upgrade pip
-      pip install -r requirements.txt
+    buildCommand:
+      - export AIOHTTP_NO_EXTENSIONS=1
+      - pip install --upgrade pip
+      - pip install -r requirements.txt
     startCommand: python bot.py
     envVars:
-      - key: AIOHTTP_NO_EXTENSIONS
-        value: "1"
+      - key: BOT_TOKEN
+        value: 8229120396:AAFgq8WzvzcpStdA3LykV8Rq6n1BL7AjdzU
