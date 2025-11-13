@@ -2,8 +2,11 @@ services:
   - type: web
     name: mytelegrambot
     env: python
+    plan: free
+    region: frankfurt
     buildCommand: |
       export AIOHTTP_NO_EXTENSIONS=1
+      pip install --upgrade pip
       pip install -r requirements.txt
     startCommand: python bot.py
     envVars:
